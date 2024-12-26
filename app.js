@@ -20,8 +20,8 @@ registerBtn.addEventListener('click', async () => {
 
     const response = await fetch(`${SERVER_URL}/register`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nickname }),
+        headers: {'Content-Type': 'application/json', 'ngrok-skip-browser-warning': 69420},
+        body: JSON.stringify({nickname}),
     });
 
     const result = await response.json();
@@ -44,8 +44,8 @@ document.querySelectorAll('[name="status"]').forEach((radio) => {
 
         const response = await fetch(`${SERVER_URL}/update_status`, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ nickname: currentUser, status }),
+            headers: {'Content-Type': 'application/json', 'ngrok-skip-browser-warning': 69420},
+            body: JSON.stringify({nickname: currentUser, status}),
         });
 
         if (!response.ok) {
@@ -56,7 +56,10 @@ document.querySelectorAll('[name="status"]').forEach((radio) => {
 
 // Отримання списку користувачів
 async function fetchUsers() {
-    const response = await fetch(`${SERVER_URL}/users`);
+    const response = await fetch(`${SERVER_URL}/users`, {
+        method: 'GET',
+        headers: {'Content-Type': 'application/json', 'ngrok-skip-browser-warning': 69420},
+    });
     const users = await response.json();
 
     usersUl.innerHTML = '';
