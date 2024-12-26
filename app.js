@@ -1,4 +1,4 @@
-const SERVER_URL = 'https://f042-83-168-77-34.ngrok-free.app/'; // Змінити на вашу адресу сервера
+const SERVER_URL = 'https://eb75-83-168-77-34.ngrok-free.app/'; // Змінити на вашу адресу сервера
 
 const tg = window.Telegram.WebApp;
 tg.expand(); // Розгортає міні-додаток на весь екран
